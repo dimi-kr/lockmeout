@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5153CBF51F278C9B00F78DDF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5153CBF41F278C9B00F78DDF /* main.swift */; };
+		5153CBFD1F278D3600F78DDF /* USBEventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5153CBFC1F278D3600F78DDF /* USBEventMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +24,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5153CBF11F278C9A00F78DDF /* logmeout */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = logmeout; sourceTree = BUILT_PRODUCTS_DIR; };
+		5153CBF11F278C9A00F78DDF /* lockmeout */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lockmeout; sourceTree = BUILT_PRODUCTS_DIR; };
 		5153CBF41F278C9B00F78DDF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		5153CBFB1F278CFF00F78DDF /* BridgeHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeHeaders.h; sourceTree = "<group>"; };
+		5153CBFC1F278D3600F78DDF /* USBEventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USBEventMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +44,7 @@
 		5153CBE81F278C9A00F78DDF = {
 			isa = PBXGroup;
 			children = (
+				5153CBFC1F278D3600F78DDF /* USBEventMonitor.swift */,
 				5153CBF31F278C9A00F78DDF /* logmeout */,
 				5153CBF21F278C9A00F78DDF /* Products */,
 			);
@@ -49,7 +53,7 @@
 		5153CBF21F278C9A00F78DDF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5153CBF11F278C9A00F78DDF /* logmeout */,
+				5153CBF11F278C9A00F78DDF /* lockmeout */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,6 +61,7 @@
 		5153CBF31F278C9A00F78DDF /* logmeout */ = {
 			isa = PBXGroup;
 			children = (
+				5153CBFB1F278CFF00F78DDF /* BridgeHeaders.h */,
 				5153CBF41F278C9B00F78DDF /* main.swift */,
 			);
 			path = logmeout;
@@ -65,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5153CBF01F278C9A00F78DDF /* logmeout */ = {
+		5153CBF01F278C9A00F78DDF /* lockmeout */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5153CBF81F278C9B00F78DDF /* Build configuration list for PBXNativeTarget "logmeout" */;
+			buildConfigurationList = 5153CBF81F278C9B00F78DDF /* Build configuration list for PBXNativeTarget "lockmeout" */;
 			buildPhases = (
 				5153CBED1F278C9A00F78DDF /* Sources */,
 				5153CBEE1F278C9A00F78DDF /* Frameworks */,
@@ -77,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = logmeout;
+			name = lockmeout;
 			productName = logmeout;
-			productReference = 5153CBF11F278C9A00F78DDF /* logmeout */;
+			productReference = 5153CBF11F278C9A00F78DDF /* lockmeout */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -97,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5153CBEC1F278C9A00F78DDF /* Build configuration list for PBXProject "logmeout" */;
+			buildConfigurationList = 5153CBEC1F278C9A00F78DDF /* Build configuration list for PBXProject "lockmeout" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -109,7 +114,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5153CBF01F278C9A00F78DDF /* logmeout */,
+				5153CBF01F278C9A00F78DDF /* lockmeout */,
 			);
 		};
 /* End PBXProject section */
@@ -120,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5153CBF51F278C9B00F78DDF /* main.swift in Sources */,
+				5153CBFD1F278D3600F78DDF /* USBEventMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,7 +253,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5153CBEC1F278C9A00F78DDF /* Build configuration list for PBXProject "logmeout" */ = {
+		5153CBEC1F278C9A00F78DDF /* Build configuration list for PBXProject "lockmeout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5153CBF61F278C9B00F78DDF /* Debug */,
@@ -256,13 +262,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5153CBF81F278C9B00F78DDF /* Build configuration list for PBXNativeTarget "logmeout" */ = {
+		5153CBF81F278C9B00F78DDF /* Build configuration list for PBXNativeTarget "lockmeout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5153CBF91F278C9B00F78DDF /* Debug */,
 				5153CBFA1F278C9B00F78DDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
