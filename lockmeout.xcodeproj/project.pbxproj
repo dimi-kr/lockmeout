@@ -44,7 +44,7 @@
 		5153CBE81F278C9A00F78DDF = {
 			isa = PBXGroup;
 			children = (
-				5153CBF31F278C9A00F78DDF /* logmeout */,
+				5153CBF31F278C9A00F78DDF /* lockmeout */,
 				5153CBF21F278C9A00F78DDF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,14 +57,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5153CBF31F278C9A00F78DDF /* logmeout */ = {
+		5153CBF31F278C9A00F78DDF /* lockmeout */ = {
 			isa = PBXGroup;
 			children = (
 				5153CBFC1F278D3600F78DDF /* USBEventMonitor.swift */,
 				5153CBFB1F278CFF00F78DDF /* BridgeHeaders.h */,
 				5153CBF41F278C9B00F78DDF /* main.swift */,
 			);
-			path = logmeout;
+			path = lockmeout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
