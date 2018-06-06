@@ -23,15 +23,26 @@ class YubiWatcher: NSObject, USBEventDelegate, NSUserNotificationCenterDelegate 
         let msg = device.name() ?? "<unknown>"
         print("title: \(title) message: \(msg)")
     }
-    
+    func lockScreenImmediate() -> Void {
+        // Note: Private -- Do not use!
+        // http://stackoverflow.com/questions/34669958/swift-how-to-call-a-c-function-loaded-from-a-dylib
+        
+        let libHandle = dlopen("/System/Library/PrivateFrameworks/login.framework/Versions/Current/login", RTLD_LAZY)
+        let sym = dlsym(libHandle, "SACLockScreenImmediate")
+        typealias myFunction = @convention(c) () -> Void
+        let SACLockScreenImmediate = unsafeBitCast(sym, to: myFunction.self)
+        SACLockScreenImmediate()
+    }
     func deviceRemoved(_ device: io_object_t) {
         let title = "Device Removed"
         let msg = device.name() ?? "<unknown>"
         print("title: \(title) message: \(msg)")
         let current = Date()
         if ((device.name()?.range(of: "Yubikey")) != nil && current.timeIntervalSince(last) > cooldown ){
-            NSWorkspace.shared.open(NSURL(fileURLWithPath: "/System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app") as URL)
+            //NSWorkspace.shared.open(NSURL(fileURLWithPath: "/System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app") as URL)
+            lockScreenImmediate()
             last = current
+            print("Locked!")
         }
         else{
             print("Cooldown \(cooldown) is more than \(current.timeIntervalSince(last))")
@@ -41,9 +52,6 @@ class YubiWatcher: NSObject, USBEventDelegate, NSUserNotificationCenterDelegate 
 }
 
 
-
-
-print("Hello, World!")
 let watcher = YubiWatcher()
 
 CFRunLoopRun()

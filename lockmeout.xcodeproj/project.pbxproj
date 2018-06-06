@@ -24,7 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5153CBF11F278C9A00F78DDF /* lockmeout */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lockmeout; sourceTree = BUILT_PRODUCTS_DIR; };
+		5153CBF11F278C9A00F78DDF /* lockmeout */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = lockmeout; path = /Users/dmitri.krivonogov/GitHub/lockmeout/build/Release/lockmeout; sourceTree = "<absolute>"; };
 		5153CBF41F278C9B00F78DDF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		5153CBFB1F278CFF00F78DDF /* BridgeHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeHeaders.h; sourceTree = "<group>"; };
 		5153CBFC1F278D3600F78DDF /* USBEventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USBEventMonitor.swift; sourceTree = "<group>"; };
@@ -45,16 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				5153CBF31F278C9A00F78DDF /* lockmeout */,
-				5153CBF21F278C9A00F78DDF /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		5153CBF21F278C9A00F78DDF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5153CBF11F278C9A00F78DDF /* lockmeout */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		5153CBF31F278C9A00F78DDF /* lockmeout */ = {
@@ -110,7 +101,7 @@
 				en,
 			);
 			mainGroup = 5153CBE81F278C9A00F78DDF;
-			productRefGroup = 5153CBF21F278C9A00F78DDF /* Products */;
+			productRefGroup = 5153CBE81F278C9A00F78DDF;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
